@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>OTP Verification</title>
+</head>
+<body>
+    <div class="phone-number-card">
+        <form action="#" class="numberContainer" >
+            <h1>Verification Code</h1>
+            <div class="phone-inp">
+                <input id="phoneNum" maxlength="17"  type="text" placeholder="Phone Number" value="+995 ">
+            </div>
+            <button disabled type="submit" id="send" >
+                Send
+            </button>
+        </form>
+        <div class="verificationimage">
+
+        </div>
+    </div>
+    <div class="messageAlert">
+        <div class="message-image">
+            <img src="./Image/messages-ios-logo.svg" alt="">
+            <span class="messText">MESSAGES</span>
+            <div class="time">
+                <span class="timeText">now</span>
+            </div>
+            <span class="code">213123</span>
+        </div>
+    </div>
+    <div class="otp-card">
+        <h1>OTP Verification</h1>
+        <p>Code has been send to <p id="yourNumber">****12345</p></p>
+        <form id="inputCodeForm" action="#" onsubmit="checkFunc"  class="otp-card-inputs">
+            <input type="number" maxlength="1" autofocus>
+            <input type="number" maxlength="1">
+            <input type="number" maxlength="1">
+            <input type="number" maxlength="1">
+            <input type="number" maxlength="1">
+        </form>
+        <button type="submit" disabled id="check">Verify</button>
+    </div>
+
+    <script src="./JS/mein.js" type="module"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

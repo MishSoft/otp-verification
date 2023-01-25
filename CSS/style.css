@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: sans-serif;
+}
+
+body {
+    /* position: relative; */
+    width: 100%;
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(../Image/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.phone-number-card {
+    width: 700px;
+    height: 400px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    background-color: rgba(255, 255, 255, 0.588);
+    backdrop-filter: blur(64px);
+    
+    border-radius: 10px;
+}
+
+
+.verificationimage {
+    width: 400px;
+    height: 100%;
+
+    background-image: url(../Image/verification1.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+.numberContainer {
+    width: 400px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+#phoneNum {
+    width: 250px;
+    height: 55px;
+
+    outline: none;
+    padding-left: 10px;
+    font-size: 15px;
+
+    border: 2px solid #223;
+    background-color: rgba(62, 62, 115, 0.704);
+    color: white;
+    border-radius: 4px;
+}
+
+#send {
+    width: 140px;
+    height: 40px;
+
+    background-color: #223;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.messageAlert {
+    position: absolute;
+
+    padding: 10px 10px;
+    /* top: 0; */
+    bottom: 100%;
+    gap: 30px;
+
+    display: flex;
+    
+
+    width: 400px;
+    height: 100px;
+
+    color: black;
+
+    background-color: rgba(225, 225, 225, 0.768);
+    backdrop-filter: blur(64px);
+    border-radius: 10px;
+
+    transition: all .2s ease-in;
+}
+
+.message-image {
+    width: 100%;
+    display: flex;
+
+    padding: 10px 10px;
+}
+.time {
+    position: absolute;
+    right: 20px;
+    top: 22px;
+
+    font-size: 14px;
+}
+
+.messText {
+    position: absolute;
+    top: 22px;
+    left: 50px;
+
+    font-size: 14px;
+
+}
+
+.messageAlert img {
+    width: 20px;
+    height: 20px;
+}
+
+.code {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.otp-card {
+    display: none;
+
+    text-align: center;
+
+    background-color: rgba(255, 255, 255, 0.588);
+    backdrop-filter: blur(64px);
+    border-radius: 10px;
+    padding: 3rem;
+}
+
+
+
+.otp-card-inputs {
+    margin: 30px 0;
+    display: grid;
+    gap: 30px;
+
+    justify-content: center;
+    grid-template-columns: repeat(5, auto);
+}
+
+
+.otp-card-inputs input {
+    width: 60px;
+    height: 70px;
+    font-size: 35px;
+
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.588);
+    backdrop-filter: blur(64px);
+}
+
+.otp-card-inputs input:focus {
+    outline: 3px solid rgb(164, 58, 164);
+    border: none;
+}
+
+
+#check {
+    width: 140px;
+    height: 40px;
+
+    background-color: rgb(164, 58, 164);
+    border-radius: 10px;
+    border: none;
+    color: white;
+
+    cursor: pointer;
+}
+
+.otp-card button[disabled] {
+    opacity: .6;
+    cursor: default;
+}
+
+
+@media screen and (max-width: 724px) {
+    .phone-number-card {
+        width: 650px;
+    }
+}
+
+@media screen and (max-width: 674px) {
+    .phone-number-card {
+        width: 600px;
+    }
+
+    .verificationimage {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 634px) {
+    .phone-number-card {
+        width: 500px;
+    }
+    .otp-card {
+        padding: 2rem;
+    }
+
+    .numberContainer {
+        z-index: 1;
+    }
+
+    #phoneNum {
+        background-color: rgba(62, 62, 115, 0.866);
+    }
+
+    .verificationimage {
+        position: absolute;
+        
+        width: 300px;
+        z-index: 0;
+    }
+}
+
+
+@media screen and (max-width:530px) {
+    .phone-number-card {
+        width: 350px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .phone-number-card {
+        width: 300px;
+        height: 300px;
+    }
+    .otp-card {
+        padding: 0;
+        width: 300px;
+    }
+
+    .otp-card-inputs {
+        margin: 50px 0;
+        width: 300px;
+
+        gap: 20px;
+    }
+
+    .otp-card-inputs input {
+        width: 40px;
+        height: 50px;
+
+        border-radius: 15px;
+    }
+
+    .messageAlert {
+        width: 300px;
+    }
+}
